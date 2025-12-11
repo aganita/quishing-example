@@ -1,2 +1,2 @@
 # quishing-example
-security awareness traning
+security awareness training
