@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Security Awareness - Protect Yourself from Quishing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>QR Code Security Awareness</h1>
+            <p class="tagline">Stay Safe from QR Phishing (Quishing) Attacks</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>What is QR Phishing?</h2>
+                <p>QR phishing, also known as "quishing," is a growing cybersecurity threat where attackers use malicious QR codes to steal your personal information, install malware, or redirect you to fraudulent websites.</p>
+                <div class="warning-box">
+                    <p><strong>⚠️ Warning:</strong> Always verify QR codes before scanning, especially in public places!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="threats">
+            <div class="container">
+                <h2>Common QR Phishing Threats</h2>
+                
+                <div class="threat-grid">
+                    <div class="threat-card" data-threat="fake-sites">
+                        <div class="threat-icon">🎣</div>
+                        <h3>QR Phishing to Fake Sites</h3>
+                        <p>The QR code encodes a URL to a spoofed login or payment page that harvests credentials or card data.</p>
+                        <ul>
+                            <li>Fake Microsoft 365 login pages</li>
+                            <li>Spoofed HR portals</li>
+                            <li>Fraudulent parking payment pages</li>
+                            <li>Fake restaurant payment systems</li>
+                        </ul>
+                        <button class="learn-more" data-target="fake-sites">Learn More</button>
+                    </div>
+
+                    <div class="threat-card" data-threat="malware">
+                        <div class="threat-icon">🦠</div>
+                        <h3>Malicious URL → Malware Download</h3>
+                        <p>Scanning opens a site that immediately downloads or prompts installation of malicious apps on your mobile device.</p>
+                        <ul>
+                            <li>Spyware installation</li>
+                            <li>Ransomware attacks</li>
+                            <li>Trojan horse apps</li>
+                            <li>Other malicious payloads</li>
+                        </ul>
+                        <button class="learn-more" data-target="malware">Learn More</button>
+                    </div>
+
+                    <div class="threat-card" data-threat="payment-fraud">
+                        <div class="threat-icon">💸</div>
+                        <h3>Invoice and Payment Fraud</h3>
+                        <p>QR codes on fake invoices or donation posters route payments to attacker-controlled portals.</p>
+                        <ul>
+                            <li>Fake charity donation requests</li>
+                            <li>Fraudulent parking meters</li>
+                            <li>Bogus invoice payments</li>
+                            <li>Scam business fronts</li>
+                        </ul>
+                        <button class="learn-more" data-target="payment-fraud">Learn More</button>
+                    </div>
+
+                    <div class="threat-card" data-threat="physical-replacement">
+                        <div class="threat-icon">🏷️</div>
+                        <h3>Physical Code Replacement</h3>
+                        <p>Attackers print stickers and place them over legitimate QR codes to redirect users to attacker sites.</p>
+                        <ul>
+                            <li>Restaurant menu overlays</li>
+                            <li>Poster replacements</li>
+                            <li>Product label tampering</li>
+                            <li>Parking meter stickers</li>
+                        </ul>
+                        <button class="learn-more" data-target="physical-replacement">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="protection">
+            <div class="container">
+                <h2>How to Protect Yourself</h2>
+                <div class="protection-tips">
+                    <div class="tip">
+                        <span class="tip-number">1</span>
+                        <h4>Verify Before Scanning</h4>
+                        <p>Check if the QR code looks tampered with or placed over another code.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">2</span>
+                        <h4>Preview URLs</h4>
+                        <p>Use QR scanner apps that show the URL before opening it.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">3</span>
+                        <h4>Look for HTTPS</h4>
+                        <p>Ensure the destination URL uses HTTPS and matches the expected domain.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">4</span>
+                        <h4>Avoid Public QR Codes</h4>
+                        <p>Be extra cautious with QR codes in public places or unsolicited messages.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">5</span>
+                        <h4>Use Official Apps</h4>
+                        <p>When possible, type URLs manually or use official apps instead of QR codes.</p>
+                    </div>
+                    <div class="tip">
+                        <span class="tip-number">6</span>
+                        <h4>Keep Software Updated</h4>
+                        <p>Ensure your device's OS and security software are up to date.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz">
+            <div class="container">
+                <h2>Test Your Knowledge</h2>
+                <div id="quiz-container">
+                    <div class="quiz-question">
+                        <p>Can you identify safe QR code practices? Take our quick quiz!</p>
+                        <button id="start-quiz" class="cta-button">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 QR Security Awareness Campaign. Stay vigilant, stay safe!</p>
+            <p>Report suspicious QR codes to your IT security team immediately.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for detailed information -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
