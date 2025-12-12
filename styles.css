@@ -117,9 +117,59 @@ header h1 {
 
 .threat-icon {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: block;
     text-align: center;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.threat-icon a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.threat-icon a:hover {
+    transform: scale(1.1);
+}
+
+.threat-icon a::after {
+    content: "Click to view full size";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.threat-icon a:hover::after {
+    opacity: 1;
+}
+
+.threat-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.threat-img:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .threat-card h3 {

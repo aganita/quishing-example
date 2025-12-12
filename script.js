@@ -272,6 +272,8 @@ function showQuestion() {
     });
     
     submitBtn.addEventListener('click', function() {
+        if (submitBtn.disabled) return; // Prevent multiple submissions
+        submitBtn.disabled = true; // Disable button after click
         checkAnswer(selectedAnswer);
     });
 }
@@ -308,15 +310,21 @@ function checkAnswer(selectedIndex) {
     
     // Update button for next question or results
     const submitBtn = document.getElementById('submit-answer');
+    submitBtn.disabled = false; // Re-enable the button
+    
+    // Remove all existing event listeners by cloning the button
+    const newSubmitBtn = submitBtn.cloneNode(true);
+    submitBtn.parentNode.replaceChild(newSubmitBtn, submitBtn);
+    
     if (currentQuestion < quizQuestions.length - 1) {
-        submitBtn.textContent = 'Next Question';
-        submitBtn.onclick = function() {
+        newSubmitBtn.textContent = 'Next Question';
+        newSubmitBtn.addEventListener('click', function() {
             currentQuestion++;
             showQuestion();
-        };
+        });
     } else {
-        submitBtn.textContent = 'View Results';
-        submitBtn.onclick = showResults;
+        newSubmitBtn.textContent = 'View Results';
+        newSubmitBtn.addEventListener('click', showResults);
     }
 }
 
